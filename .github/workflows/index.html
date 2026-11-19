@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fazha – Art, websites and domains made for you</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf4f6;--sf:#fff;--ink:#3a1f3d;--mu:#7a6379;--rose:#f3b6c4;--apr:#f9c79c;--sage:#bfdcc8;--sky:#cfe3f4;--btn:#3a1f3d;--bi:#fff;--ln:#ecd9df}
+@media(prefers-color-scheme:dark){:root{--bg:#241528;--sf:#33203a;--ink:#fbeaf0;--mu:#c5aebf;--rose:#7a3f58;--apr:#7a553a;--sage:#3f5e4b;--sky:#3b5570;--btn:#f3b6c4;--bi:#2a1530;--ln:#4a3052}}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 26px Fraunces,serif;text-decoration:none;color:inherit}
+.cur{display:inline-flex;background:var(--sf);border:2px solid var(--ln);border-radius:99px;padding:3px}
+button,input,select,textarea{font:inherit;color:inherit}
+.cur button{border:0;background:none;color:var(--mu);font-weight:700;font-size:14px;padding:7px 14px;border-radius:99px;cursor:pointer}
+.cur button[aria-pressed=true]{background:var(--btn);color:var(--bi)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.hero{display:grid;gap:28px;padding:34px 0 50px;align-items:center}
+@media(min-width:760px){.hero{grid-template-columns:1.2fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.hero h1{font-size:clamp(42px,9vw,72px);font-weight:800;letter-spacing:-.02em}
+.hero p{font-size:19px;color:var(--mu);max-width:30em;margin:18px 0 26px}
+.btn{display:inline-block;background:var(--btn);color:var(--bi);padding:14px 26px;border-radius:99px;font-weight:700;text-decoration:none;border:0;cursor:pointer}
+.btn.alt{background:none;color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+.art{position:relative;aspect-ratio:1;max-width:340px;width:100%;justify-self:center}
+.art i{position:absolute}
+.b1{inset:6% 14% 20% 0;background:var(--rose);border-radius:58% 42% 55% 45%/48% 56% 44% 52%}
+.b2{inset:34% 0 0 30%;background:var(--sky);border-radius:45% 55% 40% 60%/55% 45% 55% 45%}
+.b3{width:34%;height:34%;left:8%;bottom:4%;background:var(--sage);border-radius:50%}
+.b4{width:22%;height:22%;right:12%;top:4%;background:var(--apr);border-radius:50%}
+.art span{position:absolute;inset:0;display:grid;place-items:center;font:800 clamp(40px,10vw,60px) Fraunces,serif;transform:rotate(-6deg)}
+section{padding:36px 0}
+.sh{font-size:clamp(30px,5vw,42px);margin-bottom:8px}
+.sub{color:var(--mu);margin:0 0 24px}
+.g3{display:grid;gap:18px}
+.card{background:var(--sf);border:2px solid var(--ln);border-radius:26px;padding:24px}
+.tag{display:inline-block;padding:3px 12px;border-radius:99px;font-size:14px;font-weight:700;margin-bottom:10px;color:var(--ink)}
+.t1{background:var(--rose)}.t2{background:var(--sky)}.t3{background:var(--sage)}
+.card h3{font-size:24px}
+.card p.n{font-size:14px;color:var(--mu);margin:6px 0 10px}
+ul{list-style:none;margin:0;padding:0}
+.row{display:flex;justify-content:space-between;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px dashed var(--ln);padding:11px 0;cursor:pointer}
+.row small{display:block;color:var(--mu);font-size:14px;line-height:1.3}
+.row b{white-space:nowrap}
+.row:hover b{text-decoration:underline}
+.steps{display:grid;gap:14px;padding:0;counter-reset:s}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:s;background:var(--sf);border:2px solid var(--ln);border-radius:22px;padding:18px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--apr);color:#3a1f3d;font:800 17px Fraunces,serif;margin-bottom:8px}
+.steps b{display:block}
+.note{font-size:14px;color:var(--mu);margin-top:14px}
+.box{background:var(--rose);border-radius:34px;padding:32px 22px}
+.box h2{font-size:clamp(30px,5vw,40px);margin-bottom:6px}
+label{display:block;font-weight:700;font-size:15px;margin:14px 0 4px}
+input,select,textarea{width:100%;background:var(--sf);border:2px solid var(--ln);border-radius:14px;padding:12px 14px}
+textarea{min-height:100px}
+.msg{margin-top:14px;font-weight:700}
+.oc{background:var(--sf);border:2px solid var(--ln);border-radius:20px;padding:16px;margin-top:12px;overflow-wrap:anywhere}
+.oc small{color:var(--mu)}
+footer{padding:26px 0 40px;text-align:center;color:var(--mu);font-size:15px}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<div class="w">
+<nav><a class="logo" href="#top">Fazha</a>
+<div class="cur" role="group" aria-label="Currency"><button data-c="myr" aria-pressed="true">MYR</button><button data-c="usd" aria-pressed="false">USD</button></div></nav>
+
+<main id="site">
+<header class="hero" id="top"><div>
+<h1>Hi, I’m Fazha. Let’s make something lovely.</h1>
+<p>Custom art, friendly websites and a home on the web with your own domain. Pick what you need and place your order in a minute.</p>
+<a class="btn" href="#prices">See prices</a><a class="btn alt" href="#order">Order now</a></div>
+<div class="art" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><span>Fazha</span></div></header>
+
+<section id="prices"><h2 class="sh">Prices</h2>
+<p class="sub">Tap any item to order it. Switch currency at the top.</p>
+<div class="g3" id="cards"></div>
+<p class="note">50% deposit to book, the rest on delivery. Rush delivery (under 3 days) +30%. Prices are set separately in each currency, not converted live.</p></section>
+
+<section><h2 class="sh">How it works</h2><p class="sub">Simple and clear.</p>
+<ol class="steps"><li><b>Place your order</b>Choose an item and tell me your idea.</li><li><b>Get a quote</b>I confirm the price and timeline.</li><li><b>Pay the deposit</b>Half upfront books your spot.</li><li><b>Receive your work</b>Request tweaks, then pay the rest.</li></ol></section>
+
+<section id="order"><div class="box"><h2>Place an order</h2>
+<form id="f">
+<label for="item">What would you like?</label><select id="item" required></select>
+<label for="nm">Your name</label><input id="nm" required maxlength="100" autocomplete="name">
+<label for="ct">Email or WhatsApp number</label><input id="ct" required maxlength="150">
+<label for="nt">Your idea, references or deadline</label><textarea id="nt" maxlength="2000"></textarea>
+<p style="margin:16px 0 0"><button class="btn" type="submit">Send order</button></p>
+<p class="msg" id="msg" role="status"></p></form></div></section>
+</main>
+
+<main id="admin" hidden>
+<section><h2 class="sh">Admin</h2>
+<form id="lf"><label for="em">Email</label><input id="em" type="email" required autocomplete="username">
+<label for="pw">Password</label><input id="pw" type="password" required autocomplete="current-password">
+<p style="margin:16px 0 0"><button class="btn" type="submit">Log in</button></p></form>
+<div id="panel" hidden><p><button class="btn" id="rf">Refresh</button><button class="btn alt" id="lo">Log out</button></p><div id="orders"></div></div>
+<p class="msg" id="am" role="status"></p>
+<p><a href="#top">Back to site</a></p></section>
+</main>
+
+<footer>Made with care by Fazha · Malaysia · <a href="#admin">Admin</a></footer>
+</div>
+<script>
+// 1) Paste your Supabase details here (see README.md). The anon key is safe to publish.
+const SB_URL='PASTE_SUPABASE_URL', SB_KEY='PASTE_SUPABASE_ANON_KEY';
+
+// Edit prices here: [name, note, MYR, USD]
+const D=[
+{g:'Art',c:'t1',h:'Custom artwork',n:'Personal use. Commercial licence +50%.',i:[
+['Headshot','Digital, full colour',79,19],['Half body','Simple background',149,35],['Full body','Detailed background',249,59],['Extra character','Add-on to any piece',89,21]]},
+{g:'Websites',c:'t2',h:'Website making',n:'Includes a free .com for year one and 2 revision rounds.',i:[
+['One-page site','Bio, event or link page',590,139],['Portfolio site','Most popular. Up to 5 pages',1490,349],['Commission shop','Price list, order form, admin page',2990,699]]},
+{g:'Domains',c:'t3',h:'Domain rental',n:'Per year. Setup is free with any website.',i:[
+['.com domain','Billed yearly',59,14],['.my domain','Billed yearly',79,18],['.art domain','Billed yearly',79,18],['Domain setup','Connect it to your site',29,7]]}];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let cur='myr',token=null;
+const all=D.flatMap(g=>g.i.map(x=>({n:g.g+': '+x[0],m:x[2],u:x[3]})));
+const money=(m,u)=>cur==='myr'?'RM '+m.toLocaleString('en-US'):'$'+u;
+const cfg=()=>!SB_URL.startsWith('PASTE');
+const hd=t=>({apikey:SB_KEY,Authorization:'Bearer '+(t||SB_KEY),'Content-Type':'application/json'});
+
+function draw(){
+  let k=0;
+  $('#cards').innerHTML=D.map(g=>'<article class="card"><span class="tag '+g.c+'">'+g.g+'</span><h3>'+g.h+'</h3><p class="n">'+g.n+'</p><ul>'+
+    g.i.map(x=>{const j=k++;return '<li><button class="row" data-k="'+j+'"><span>'+x[0]+'<small>'+x[1]+'</small></span><b>'+money(x[2],x[3])+'</b></button></li>'}).join('')+'</ul></article>').join('');
+  const s=$('#item'),v=s.value;
+  s.innerHTML=all.map((x,j)=>'<option value="'+j+'">'+x.n+' ('+money(x.m,x.u)+')</option>').join('');
+  if(v)s.value=v;
+}
+document.querySelectorAll('.cur button').forEach(b=>b.onclick=()=>{cur=b.dataset.c;document.querySelectorAll('.cur button').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()});
+$('#cards').onclick=e=>{const r=e.target.closest('.row');if(!r)return;$('#item').value=r.dataset.k;$('#order').scrollIntoView();$('#nm').focus()};
+
+$('#f').onsubmit=async e=>{
+  e.preventDefault();const m=$('#msg');
+  if(!cfg()){m.textContent='Orders are not connected yet. Please contact Fazha directly.';return}
+  const it=all[$('#item').value];m.textContent='Sending…';
+  try{
+    const r=await fetch(SB_URL+'/rest/v1/orders',{method:'POST',headers:{...hd(),Prefer:'return=minimal'},
+      body:JSON.stringify({name:$('#nm').value.trim(),contact:$('#ct').value.trim(),item:it.n,price:'RM '+it.m+' / $'+it.u,notes:$('#nt').value.trim()})});
+    if(!r.ok)throw 0;
+    m.textContent='Thank you! Your order is in. Fazha will reply with a quote soon.';e.target.reset();
+  }catch(_){m.textContent='Sorry, the order did not send. Please try again.'}
+};
+
+async function load(){
+  const r=await fetch(SB_URL+'/rest/v1/orders?select=*&order=created_at.desc',{headers:hd(token)});
+  if(!r.ok){$('#am').textContent='Could not load orders.';return}
+  const o=await r.json();
+  $('#orders').innerHTML=o.length?o.map(x=>'<div class="oc"><b>'+esc(x.item)+'</b> · '+esc(x.price)+'<br>'+esc(x.name)+' · '+esc(x.contact)+'<br>'+(x.notes?esc(x.notes)+'<br>':'')+'<small>'+new Date(x.created_at).toLocaleString()+'</small></div>').join(''):'<p>No orders yet.</p>';
+  $('#am').textContent='';
+}
+$('#lf').onsubmit=async e=>{
+  e.preventDefault();const m=$('#am');
+  if(!cfg()){m.textContent='Add your Supabase details first (see README).';return}
+  try{
+    const r=await fetch(SB_URL+'/auth/v1/token?grant_type=password',{method:'POST',headers:hd(),body:JSON.stringify({email:$('#em').value,password:$('#pw').value})});
+    const j=await r.json();if(!r.ok)throw 0;
+    token=j.access_token;$('#pw').value='';$('#lf').hidden=false;$('#lf').hidden=true;$('#panel').hidden=false;load();
+  }catch(_){m.textContent='Wrong email or password.'}
+};
+$('#rf').onclick=load;
+$('#lo').onclick=()=>{token=null;$('#panel').hidden=true;$('#lf').hidden=false;$('#orders').innerHTML=''};
+function route(){const a=location.hash==='#admin';$('#site').hidden=a;$('#admin').hidden=!a}
+addEventListener('hashchange',route);route();draw();
+</script>
+</body>
+</html>
